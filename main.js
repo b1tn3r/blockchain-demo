@@ -16,7 +16,7 @@ class Block {                                                     // the blockch
     calculateHash() {                          // calculates the hash value of our block by taking the properties inputted into the Block and runs it through a hash function and returns the hash for our block that will represent it in the blockchain, which another Block will have it as it's "previousHash"
         return SHA256(                         // concatenates all the block's properties together (converting the data into a String) and runs the combined String through a hash function to create a hash object that we convert to a String with 'toString()' and this hash String will represent the current block.. The blocks in the blockchain have integrity because the hashes are linked to one another and cannot be changed since the 'previousHash' is used in the hashing function to create the current block's hash, so this keeps all the hashes linked to one another cryptography-wise
             this.index +
-            this.timestamp + 
+            this.timestamp +
             JSON.stringify(this.data) +
             this.previousHash +
             this.nonce                      // nonce is also added to our hash function so that when the Block is mined, it changes our hash calculation every time the hash is recalculated with an incremented nonce value (nonce++)

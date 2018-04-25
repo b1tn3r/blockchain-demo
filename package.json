@@ -1,0 +1,14 @@
+{
+  "name": "blockchain-demo",
+  "version": "1.0.0",
+  "description": "Simple Blockchain Demo with Proof of Work Algorithm featuring Titan Coin",
+  "main": "main.js",
+  "scripts": {
+    "start": "node ./main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1"
+  }
+}
